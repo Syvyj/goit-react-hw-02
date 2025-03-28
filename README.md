@@ -1,12 +1,48 @@
-# React + Vite
+# Sip Happens Café Feedback App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🇺🇸 Description
 
-Currently, two official plugins are available:
+A React application for collecting and displaying customer feedback for "Sip
+Happens Café". The app allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Leave feedback by selecting one of three options: Good, Neutral, or Bad
+- See statistics of collected feedback including:
+  - Count for each feedback type
+  - Total number of feedback
+  - Percentage of positive feedback
+- Reset all feedback counters
+- Data persists in local storage between sessions
+- Responsive design with smooth animations and modern UI
 
-## Expanding the ESLint configuration
+## Technologies used:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React with Hooks (useState, useEffect)
+- CSS Modules
+- LocalStorage for data persistence
+- Modern-normalize for consistent styling
+- Vite as build tool
+
+---
+
+## 🇺🇦 Опис
+
+React-додаток для збору та відображення відгуків клієнтів кав'ярні "Sip Happens
+Café". Додаток дозволяє:
+
+- Залишати відгуки, обираючи один з трьох варіантів: Добре, Нейтрально або
+  Погано
+- Переглядати статистику зібраних відгуків, включаючи:
+  - Кількість кожного типу відгуків
+  - Загальну кількість відгуків
+  - Відсоток позитивних відгуків
+- Скидати всі лічильники відгуків
+- Дані зберігаються в локальному сховищі між сесіями
+- Адаптивний дизайн з плавними анімаціями та сучасним інтерфейсом
+
+## Використані технології:
+
+- React з Hooks (useState, useEffect)
+- CSS Modules
+- LocalStorage для збереження даних
+- Modern-normalize для узгодженої стилізації
+- Vite як інструмент збірки
