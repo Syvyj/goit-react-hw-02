@@ -1,8 +1,7 @@
 import styles from './Feedback.module.css';
 
-function Feedback({ feedback, totalFeedback }) {
+function Feedback({ feedback, totalFeedback, positivePercentage }) {
   const { good, neutral, bad } = feedback;
-  const positivePercentage = Math.round((good / totalFeedback) * 100);
 
   return (
     <div className={styles.container}>

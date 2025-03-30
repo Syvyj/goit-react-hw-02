@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Description from '../Description/Description';
 import Feedback from '../Feedback/Feedback';
 import Options from '../Options/Options';
 import Notification from '../Notification/Notification';
@@ -26,6 +27,9 @@ function App() {
   };
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positivePercentage = totalFeedback > 0 
+    ? Math.round((feedback.good / totalFeedback) * 100) 
+    : 0;
 
   const handleReset = () => {
     setFeedback({
@@ -37,17 +41,18 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Sip Happens Café</h1>
-      <p className={styles.description}>
-        Please leave your feedback about our service by selecting one of the options below.
-      </p>
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         totalFeedback={totalFeedback}
         handleReset={handleReset}
       />
       {totalFeedback > 0 ? (
-        <Feedback feedback={feedback} totalFeedback={totalFeedback} />
+        <Feedback 
+          feedback={feedback} 
+          totalFeedback={totalFeedback} 
+          positivePercentage={positivePercentage}
+        />
       ) : (
         <Notification message="There is no feedback" />
       )}
